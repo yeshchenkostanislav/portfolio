@@ -1,0 +1,73 @@
+@import "_fonts";
+@import "_mixins";
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $base-font;
+  font-size: $base-font-size;
+  min-width: 320px;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: $base-font;
+  transition: $t-time;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 1170px;
+  padding: 0 15px;
+
+  @media (max-width: 1199px) {
+    width: 970px;
+  }
+
+  @media (max-width: 992px) {
+    width: 767px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%
+  }
+}
+
+@import "icons";
+
+@import "../elements/banner/banner";
+@import "../elements/menu/menu";
+@import "../elements/studio/studio";
+@import "../elements/slogan/slogan";
+@import "../elements/development/development";
+@import "../elements/search-engines/search-engines";
+@import "../elements/recent-projects/recent-projects";
+@import "../elements/adaptability/adaptability";
+@import "../elements/traid-in/traid-in";
+@import "../elements/care/care";
+@import "../elements/form/form";

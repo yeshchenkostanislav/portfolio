@@ -1,0 +1,162 @@
+.recent-projects {
+  $root: &;
+
+  &__wrap {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+  }
+
+  &__header {
+    width: 100%;
+    padding: 20px 0;
+    background: #303263;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    position: relative;
+    z-index: 1;
+
+    @media(max-width: 578px) {
+      font-size: 24px;
+    }
+
+
+
+    &:before {
+      content: 'OUR PROJECTS';
+      position: absolute;
+      color: rgba(#c1c1c1, .3);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 96px;
+      font-weight: 700;
+      line-height: 45.23px;
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      z-index: -1;
+      max-width: 800px;
+      width: 200%;
+
+      @media(max-width: 992px) {
+        font-size: 70px;
+        width: 140%;
+      }
+
+      @media(max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    max-width: 1520px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media(max-width: 1530px) {
+      justify-content: center;
+    }
+
+    @media(max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &_hide {
+      display: none;
+    }
+  }
+
+  &__list-item-img {
+    display: block;
+    transform: scale(1);
+    height: 100%;
+    margin: 0 auto 0 auto;
+
+    @media(max-width: 768px) {
+      height: auto;
+    }
+  }
+
+  &__list-item {
+    display: block;
+    overflow: hidden;
+
+    @media(max-width: 1530px) {
+      &:nth-child(1) {
+        order: 1;
+      }
+
+      &:nth-child(2) {
+        order: 2;
+
+        @media(max-width: 1530px) {
+          flex-basis: 100%;
+        }
+      }
+
+      &:nth-child(5) {
+        order: 3;
+        flex: none;
+
+
+      }
+
+      &:nth-child(6) {
+        order: 4;
+      }
+    }
+
+    &:hover {
+      #{$root} {
+        &__list-item-img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    padding: 27px 0;
+    background: #303263;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  &__btn {
+    width: 240px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(#fff, .5);
+    color: rgba(#fff, .9);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .4s;
+
+    @media(max-width: 576px) {}
+
+    &:hover {
+      cursor: pointer;
+      background: rgba(#fff, .7);
+    }
+  }
+}

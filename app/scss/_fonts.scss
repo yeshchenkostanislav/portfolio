@@ -1,0 +1,23 @@
+//Arial Regular
+@font-face {
+  font-family: 'Arial';
+  src: url('../fonts/Arial/ArialMT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//Arial Bold
+@font-face {
+  font-family: 'Arial';
+  src: url('../fonts/Arial/Arial-BoldMT.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+//Arial Black
+@font-face {
+  font-family: 'Arial';
+  src: url('../fonts/Arial/Arial-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}

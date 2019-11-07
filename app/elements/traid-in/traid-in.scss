@@ -1,0 +1,149 @@
+.traid-in {
+  padding: 65px 0 50px 0;
+  background: url(img/traid-in-bg.png)no-repeat center/cover;
+  position: relative;
+
+  @media(max-width: 576px) {
+    padding: 40px 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, .5);
+    z-index: 1;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    align-items: center;
+    width: 1400px;
+  }
+
+  &__title {
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    font-weight: 800;
+    letter-spacing: 2.4px;
+    color: #ffffff;
+
+    @media(max-width: 576px) {
+      font-size: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 80px 0 0 0;
+    width: 100%;
+
+    @media(max-width: 1289px) {
+      justify-content: center;
+    }
+
+    @media(max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media(max-width: 576px) {
+      margin: 30px 0 0 0;
+    }
+  }
+
+  &__list-item {
+    max-width: 420px;
+    width: 100%;
+
+    @media(max-width: 1340px) {
+      flex-basis: 50%;
+
+      &:nth-child(1) {
+        margin: 0 50px 0 0;
+
+        @media(max-width: 992px) {
+          margin: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        margin: 50px 0 0 0;
+
+        @media(max-width: 992px) {
+          margin: 0;
+        }
+      }
+    }
+
+    @media(max-width: 992px) {
+      &:not(:first-child) {
+        margin: 50px 0 0 0;
+      }
+    }
+  }
+
+  &__list-item-header {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    min-height: 67px;
+  }
+
+  &__descr {
+    font-size: 18px;
+    margin: 20px 0 0 0;
+    letter-spacing: 0.9px;
+    line-height: 30px;
+  }
+
+  &__svg {
+    margin: 0 20px 0 0;
+    fill: #00b9e7;
+  }
+
+  &__diamond {
+    width: 64px;
+    height: 49px;
+
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 330px;
+    height: 64px;
+    border-radius: 20px;
+    background-color: #f6ae48;
+    margin: 20px 0 0 0;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+
+    @media(max-width: 992px) {
+      margin: 50px 0 0 0;
+    }
+
+    @media(max-width: 576px) {
+      width: 250px;
+      font-size: 18px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: darken(#f6ae48, 10%);
+    }
+  }
+}
